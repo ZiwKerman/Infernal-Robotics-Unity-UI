@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587420756307165319">
+  <Author />
+  <Info />
+  <Assets>
+    <Asset Name="Aero Matics Bold Italic" Path="Assets/Fonts/Aero Matics Bold Italic.ttf" Type="Font" Url="Fonts/Aero Matics Bold Italic" AutoLoad="false" />
+    <Asset Name="Aero Matics Bold" Path="Assets/Fonts/Aero Matics Bold.ttf" Type="Font" Url="Fonts/Aero Matics Bold" AutoLoad="false" />
+    <Asset Name="Aero Matics Italic" Path="Assets/Fonts/Aero Matics Italic.ttf" Type="Font" Url="Fonts/Aero Matics Italic" AutoLoad="false" />
+    <Asset Name="Aero Matics Light" Path="Assets/Fonts/Aero Matics Light.ttf" Type="Font" Url="Fonts/Aero Matics Light" AutoLoad="false" />
+    <Asset Name="Aero Matics Regular" Path="Assets/Fonts/Aero Matics Regular.ttf" Type="Font" Url="Fonts/Aero Matics Regular" AutoLoad="false" />
+    <Asset Name="icon_stop" Path="Assets/Images/Icons/icon_stop.png" Type="Texture2D" Url="Images/Icons/icon_stop" AutoLoad="false" />
+    <Asset Name="left" Path="Assets/Images/Icons/left.png" Type="Texture2D" Url="Images/Icons/left" AutoLoad="false" />
+    <Asset Name="left_toggle" Path="Assets/Images/Icons/left_toggle.png" Type="Texture2D" Url="Images/Icons/left_toggle" AutoLoad="false" />
+    <Asset Name="noninverted" Path="Assets/Images/Icons/noninverted.png" Type="Texture2D" Url="Images/Icons/noninverted" AutoLoad="false" />
+    <Asset Name="presetmode" Path="Assets/Images/Icons/presetmode.png" Type="Texture2D" Url="Images/Icons/presetmode" AutoLoad="false" />
+    <Asset Name="revert" Path="Assets/Images/Icons/revert.png" Type="Texture2D" Url="Images/Icons/revert" AutoLoad="false" />
+    <Asset Name="right" Path="Assets/Images/Icons/right.png" Type="Texture2D" Url="Images/Icons/right" AutoLoad="false" />
+    <Asset Name="right_toggle" Path="Assets/Images/Icons/right_toggle.png" Type="Texture2D" Url="Images/Icons/right_toggle" AutoLoad="false" />
+    <Asset Name="unlocked" Path="Assets/Images/Icons/unlocked.png" Type="Texture2D" Url="Images/Icons/unlocked" AutoLoad="false" />
+    <Asset Name="dotYellow" Path="Assets/Images/dotYellow.png" Type="Texture2D" Url="Images/dotYellow" AutoLoad="false" />
+    <Asset Name="metalPanel_yellowCorner" Path="Assets/Images/metalPanel_yellowCorner.png" Type="Texture2D" Url="Images/metalPanel_yellowCorner" AutoLoad="false" />
+    <Asset Name="squareGreen" Path="Assets/Images/squareGreen.png" Type="Texture2D" Url="Images/squareGreen" AutoLoad="false" />
+    <Asset Name="squareRed" Path="Assets/Images/squareRed.png" Type="Texture2D" Url="Images/squareRed" AutoLoad="false" />
+    <Asset Name="FlightControllerServoGroupLine" Path="Assets/Prefabs/FlightControllerServoGroupLine.prefab" Type="GameObject" Url="Prefabs/FlightControllerServoGroupLine" AutoLoad="false" />
+    <Asset Name="FlightControllerServoLine" Path="Assets/Prefabs/FlightControllerServoLine.prefab" Type="GameObject" Url="Prefabs/FlightControllerServoLine" AutoLoad="false" />
+    <Asset Name="FlightServoControlWindowPrefab" Path="Assets/Prefabs/FlightServoControlWindowPrefab.prefab" Type="GameObject" Url="Prefabs/FlightServoControlWindowPrefab" AutoLoad="false" />
+  </Assets>
+  <Dependencies />
+</KSPBundleDefinition>
