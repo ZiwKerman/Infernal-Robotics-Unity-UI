@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/IR_UI_Elements.unity
+  isLoaded: 1
+  isActive: 1
