@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587420756307165319">
-  <Author />
-  <Info />
+<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587419162567582657">
+  <Author>ZiwKerman</Author>
+  <Info>UI Assets for Infernal Robotics Mod</Info>
   <Assets>
     <Asset Name="Aero Matics Bold Italic" Path="Assets/Fonts/Aero Matics Bold Italic.ttf" Type="Font" Url="Fonts/Aero Matics Bold Italic" AutoLoad="false" />
     <Asset Name="Aero Matics Bold" Path="Assets/Fonts/Aero Matics Bold.ttf" Type="Font" Url="Fonts/Aero Matics Bold" AutoLoad="false" />
     <Asset Name="Aero Matics Italic" Path="Assets/Fonts/Aero Matics Italic.ttf" Type="Font" Url="Fonts/Aero Matics Italic" AutoLoad="false" />
     <Asset Name="Aero Matics Light" Path="Assets/Fonts/Aero Matics Light.ttf" Type="Font" Url="Fonts/Aero Matics Light" AutoLoad="false" />
     <Asset Name="Aero Matics Regular" Path="Assets/Fonts/Aero Matics Regular.ttf" Type="Font" Url="Fonts/Aero Matics Regular" AutoLoad="false" />
+    <Asset Name="IRWindowBG" Path="Assets/Images/IRWindowBG.png" Type="Texture2D" Url="Images/IRWindowBG" AutoLoad="false" />
+    <Asset Name="IRWindowButton" Path="Assets/Images/IRWindowButton.png" Type="Texture2D" Url="Images/IRWindowButton" AutoLoad="false" />
+    <Asset Name="IRWindowButton_Hover" Path="Assets/Images/IRWindowButton_Hover.png" Type="Texture2D" Url="Images/IRWindowButton_Hover" AutoLoad="false" />
+    <Asset Name="IRWindowButton_Pressed" Path="Assets/Images/IRWindowButton_Pressed.png" Type="Texture2D" Url="Images/IRWindowButton_Pressed" AutoLoad="false" />
+    <Asset Name="IRWindowClose" Path="Assets/Images/IRWindowClose.png" Type="Texture2D" Url="Images/IRWindowClose" AutoLoad="false" />
+    <Asset Name="IRWindowClose_Hover" Path="Assets/Images/IRWindowClose_Hover.png" Type="Texture2D" Url="Images/IRWindowClose_Hover" AutoLoad="false" />
+    <Asset Name="IRWindowClose_Pressed" Path="Assets/Images/IRWindowClose_Pressed.png" Type="Texture2D" Url="Images/IRWindowClose_Pressed" AutoLoad="false" />
+    <Asset Name="IRWindowSettings" Path="Assets/Images/IRWindowSettings.png" Type="Texture2D" Url="Images/IRWindowSettings" AutoLoad="false" />
+    <Asset Name="IRWindowSettings_Hover" Path="Assets/Images/IRWindowSettings_Hover.png" Type="Texture2D" Url="Images/IRWindowSettings_Hover" AutoLoad="false" />
+    <Asset Name="IRWindowSettings_Pressed" Path="Assets/Images/IRWindowSettings_Pressed.png" Type="Texture2D" Url="Images/IRWindowSettings_Pressed" AutoLoad="false" />
+    <Asset Name="auto_revert" Path="Assets/Images/Icons/auto_revert.png" Type="Texture2D" Url="Images/Icons/auto_revert" AutoLoad="false" />
+    <Asset Name="down" Path="Assets/Images/Icons/down.png" Type="Texture2D" Url="Images/Icons/down" AutoLoad="false" />
+    <Asset Name="icon_cog" Path="Assets/Images/Icons/icon_cog.png" Type="Texture2D" Url="Images/Icons/icon_cog" AutoLoad="false" />
     <Asset Name="icon_stop" Path="Assets/Images/Icons/icon_stop.png" Type="Texture2D" Url="Images/Icons/icon_stop" AutoLoad="false" />
+    <Asset Name="inverted" Path="Assets/Images/Icons/inverted.png" Type="Texture2D" Url="Images/Icons/inverted" AutoLoad="false" />
     <Asset Name="left" Path="Assets/Images/Icons/left.png" Type="Texture2D" Url="Images/Icons/left" AutoLoad="false" />
     <Asset Name="left_toggle" Path="Assets/Images/Icons/left_toggle.png" Type="Texture2D" Url="Images/Icons/left_toggle" AutoLoad="false" />
+    <Asset Name="locked" Path="Assets/Images/Icons/locked.png" Type="Texture2D" Url="Images/Icons/locked" AutoLoad="false" />
+    <Asset Name="next" Path="Assets/Images/Icons/next.png" Type="Texture2D" Url="Images/Icons/next" AutoLoad="false" />
     <Asset Name="noninverted" Path="Assets/Images/Icons/noninverted.png" Type="Texture2D" Url="Images/Icons/noninverted" AutoLoad="false" />
     <Asset Name="presetmode" Path="Assets/Images/Icons/presetmode.png" Type="Texture2D" Url="Images/Icons/presetmode" AutoLoad="false" />
+    <Asset Name="presets" Path="Assets/Images/Icons/presets.png" Type="Texture2D" Url="Images/Icons/presets" AutoLoad="false" />
+    <Asset Name="prev" Path="Assets/Images/Icons/prev.png" Type="Texture2D" Url="Images/Icons/prev" AutoLoad="false" />
     <Asset Name="revert" Path="Assets/Images/Icons/revert.png" Type="Texture2D" Url="Images/Icons/revert" AutoLoad="false" />
     <Asset Name="right" Path="Assets/Images/Icons/right.png" Type="Texture2D" Url="Images/Icons/right" AutoLoad="false" />
     <Asset Name="right_toggle" Path="Assets/Images/Icons/right_toggle.png" Type="Texture2D" Url="Images/Icons/right_toggle" AutoLoad="false" />
+    <Asset Name="trash" Path="Assets/Images/Icons/trash.png" Type="Texture2D" Url="Images/Icons/trash" AutoLoad="false" />
     <Asset Name="unlocked" Path="Assets/Images/Icons/unlocked.png" Type="Texture2D" Url="Images/Icons/unlocked" AutoLoad="false" />
+    <Asset Name="up" Path="Assets/Images/Icons/up.png" Type="Texture2D" Url="Images/Icons/up" AutoLoad="false" />
+    <Asset Name="dotBlue" Path="Assets/Images/dotBlue.png" Type="Texture2D" Url="Images/dotBlue" AutoLoad="false" />
+    <Asset Name="dotGreen" Path="Assets/Images/dotGreen.png" Type="Texture2D" Url="Images/dotGreen" AutoLoad="false" />
+    <Asset Name="dotRed" Path="Assets/Images/dotRed.png" Type="Texture2D" Url="Images/dotRed" AutoLoad="false" />
+    <Asset Name="dotWhite" Path="Assets/Images/dotWhite.png" Type="Texture2D" Url="Images/dotWhite" AutoLoad="false" />
     <Asset Name="dotYellow" Path="Assets/Images/dotYellow.png" Type="Texture2D" Url="Images/dotYellow" AutoLoad="false" />
-    <Asset Name="metalPanel_yellowCorner" Path="Assets/Images/metalPanel_yellowCorner.png" Type="Texture2D" Url="Images/metalPanel_yellowCorner" AutoLoad="false" />
     <Asset Name="squareGreen" Path="Assets/Images/squareGreen.png" Type="Texture2D" Url="Images/squareGreen" AutoLoad="false" />
     <Asset Name="squareRed" Path="Assets/Images/squareRed.png" Type="Texture2D" Url="Images/squareRed" AutoLoad="false" />
     <Asset Name="FlightControllerServoGroupLine" Path="Assets/Prefabs/FlightControllerServoGroupLine.prefab" Type="GameObject" Url="Prefabs/FlightControllerServoGroupLine" AutoLoad="false" />
     <Asset Name="FlightControllerServoLine" Path="Assets/Prefabs/FlightControllerServoLine.prefab" Type="GameObject" Url="Prefabs/FlightControllerServoLine" AutoLoad="false" />
     <Asset Name="FlightServoControlWindowPrefab" Path="Assets/Prefabs/FlightServoControlWindowPrefab.prefab" Type="GameObject" Url="Prefabs/FlightServoControlWindowPrefab" AutoLoad="false" />
+    <Asset Name="GenericWindowPrefab" Path="Assets/Prefabs/GenericWindowPrefab.prefab" Type="GameObject" Url="Prefabs/GenericWindowPrefab" AutoLoad="false" />
+    <Asset Name="UISettingsWindowPrefab" Path="Assets/Prefabs/UISettingsWindowPrefab.prefab" Type="GameObject" Url="Prefabs/UISettingsWindowPrefab" AutoLoad="false" />
   </Assets>
   <Dependencies />
 </KSPBundleDefinition>
