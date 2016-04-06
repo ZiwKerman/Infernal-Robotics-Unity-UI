@@ -10,101 +10,43 @@ namespace InfernalRobotics.Gui
     public class GroupDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         public Canvas mainCanvas;
+        public Sprite background;
 
-        private Transform startingParent;
-        private GameObject draggedItem;
-        private Transform dropZone;
-        private Vector2 dragHandleOffset;
-        private int startingSiblingIndex = 0;
-        private GameObject placeholder;
-        private IEnumerator _AnimateHeightCoroutine;
-        private IEnumerator _AnimatePositionCoroutine;
+        protected GameObject draggedItem;
+        protected Transform dropZone;
+        protected Vector2 dragHandleOffset;
+        protected Image draggedItemBG;
+        protected int startingSiblingIndex = 0;
 
-        private const float PLACEHOLDER_MIN_HEIGHT = 10f;
+        protected GameObject placeholder;
+        protected const float PLACEHOLDER_MIN_HEIGHT = 10f;
 
-        private float startingHeight;
+        protected UIAnimationHelper animationHelper;
 
-        private void SetHeight(float newHeight)
+        protected float startingHeight;
+
+        protected void SetPlaceholderHeight(float newHeight)
         {
             placeholder.GetComponent<LayoutElement>().preferredHeight = newHeight;
         }
 
-        private void AnimatePlaceholderHeight(float from, float to, float duration, Action callback = null)
+        protected void SetDraggedItemPosition(Vector2 newPosition)
         {
-            if (_AnimateHeightCoroutine != null)
-            {
-                StopCoroutine(_AnimateHeightCoroutine);
-            }
-
-            _AnimateHeightCoroutine = AnimateHeightCoroutine(from, to, duration, callback);
-            StartCoroutine(_AnimateHeightCoroutine);
+            var t = draggedItem.transform as RectTransform;
+            t.position = newPosition;
         }
 
-        private IEnumerator AnimateHeightCoroutine(float from, float to, float duration, Action callback)
+        public virtual float GetDraggedItemHeight()
         {
-            // wait for end of frame so that only the last call to fade that frame is honoured.
-            yield return new WaitForEndOfFrame();
-
-            float progress = 0.0f;
-
-            while (progress <= 1.0f)
-            {
-                progress += Time.deltaTime / duration;
-
-                SetHeight(Mathf.Lerp(from, to, progress));
-
-                yield return null;
-            }
-
-            if (callback != null)
-                callback.Invoke();
-
-            _AnimateHeightCoroutine = null;
+            return draggedItem.GetComponent<VerticalLayoutGroup>().preferredHeight;
         }
 
-        private void AnimateDragItemPosition(Vector2 from, Vector2 to, float duration, Action callback = null)
+        public virtual void OnBeginDrag(PointerEventData eventData)
         {
-            if (_AnimatePositionCoroutine != null)
-            {
-                StopCoroutine(_AnimatePositionCoroutine);
-            }
-
-            _AnimatePositionCoroutine = AnimatePositionCoroutine(from, to, duration, callback);
-            StartCoroutine(_AnimatePositionCoroutine);
-        }
-
-        private IEnumerator AnimatePositionCoroutine(Vector2 from, Vector2 to, float duration, Action callback)
-        {
-            // wait for end of frame so that only the last call to fade that frame is honoured.
-            yield return new WaitForEndOfFrame();
-
-            float progress = 0.0f;
-
-            while (progress <= 1.0f)
-            {
-                progress += Time.deltaTime / duration;
-
-                Vector2 newPosition = new Vector2(Mathf.Lerp(from.x, to.x, progress), Mathf.Lerp(from.y, to.y, progress));
-                var t = draggedItem.transform as RectTransform;
-                t.position = newPosition;
-
-                yield return null;
-            }
-
-            if (callback != null)
-                callback.Invoke();
-
-            _AnimatePositionCoroutine = null;
-        }
-
-
-
-        public void OnBeginDrag(PointerEventData eventData)
-        {
-            draggedItem = this.transform.parent.parent.gameObject; //need to get the whole line as dragged item
+            if(draggedItem == null)
+                draggedItem = this.transform.parent.parent.gameObject; //need to get the whole line as dragged item
             dropZone = draggedItem.transform.parent;
             startingSiblingIndex = draggedItem.transform.GetSiblingIndex();
-            startingParent = draggedItem.transform.parent;
             dragHandleOffset = this.transform.position - draggedItem.transform.position;
             
             placeholder = new GameObject();
@@ -114,25 +56,35 @@ namespace InfernalRobotics.Gui
             rt.pivot = Vector2.zero;
 
             var le = placeholder.AddComponent<LayoutElement>();
-            le.preferredHeight = startingHeight = draggedItem.GetComponent<VerticalLayoutGroup>().preferredHeight;
-            le.flexibleWidth = 1;
+            le.preferredHeight = startingHeight = GetDraggedItemHeight();
+            //le.flexibleWidth = 1;
 
-            AnimatePlaceholderHeight(le.preferredHeight, PLACEHOLDER_MIN_HEIGHT, 0.1f);
+            animationHelper = draggedItem.AddComponent<UIAnimationHelper>();
+            animationHelper.SetHeight = SetPlaceholderHeight;
+            animationHelper.SetPosition = SetDraggedItemPosition;
+
+            animationHelper.AnimateHeight(le.preferredHeight, PLACEHOLDER_MIN_HEIGHT, 0.1f);
 
             var cg = draggedItem.AddComponent<CanvasGroup>();
             cg.blocksRaycasts = false;
+
+            draggedItemBG = draggedItem.AddComponent<Image>();
+            draggedItemBG.sprite = background;
+            draggedItemBG.type = Image.Type.Sliced;
+            draggedItemBG.color = Color.white;
+            draggedItemBG.fillCenter = true;
 
             draggedItem.transform.SetParent(mainCanvas.transform);
 
             Debug.Log("OnBeginDrag: draggedItem.name = " + draggedItem.name + ", dropZone.name" + dropZone.name);
         }
 
-        public void OnDrag(PointerEventData eventData)
+        public virtual void OnDrag(PointerEventData eventData)
         {
             draggedItem.transform.position = eventData.position - dragHandleOffset;
 
             //we don't want to change siblings while we are still animating
-            if (_AnimateHeightCoroutine != null)
+            if (animationHelper.isHeightActive)
                 return;
 
             var currentSiblingIndex = placeholder.transform.GetSiblingIndex();
@@ -155,15 +107,15 @@ namespace InfernalRobotics.Gui
             if (newSiblingIndex != placeholder.transform.GetSiblingIndex())
             {
                 placeholder.transform.SetSiblingIndex(newSiblingIndex);
-                AnimatePlaceholderHeight(PLACEHOLDER_MIN_HEIGHT, startingHeight, 0.1f);
+                animationHelper.AnimateHeight(PLACEHOLDER_MIN_HEIGHT, startingHeight, 0.1f);
             }
         }
 
-        public void OnEndDrag(PointerEventData eventData)
+        public virtual void OnEndDrag(PointerEventData eventData)
         {
-            if (_AnimateHeightCoroutine != null)
+            if (animationHelper.isHeightActive)
             {
-                StopCoroutine(_AnimateHeightCoroutine);
+                animationHelper.StopHeight();
             }
             RectTransform t = draggedItem.transform as RectTransform;
             RectTransform p = placeholder.transform as RectTransform;
@@ -173,13 +125,13 @@ namespace InfernalRobotics.Gui
             if(p.sizeDelta.y > PLACEHOLDER_MIN_HEIGHT)
                 newPosition = p.position;
 
-            AnimateDragItemPosition(t.position, newPosition, 0.07f);
-            AnimatePlaceholderHeight(placeholder.GetComponent<LayoutElement>().preferredHeight, startingHeight, 0.1f, OnEndDragAnimateEnd);
+            animationHelper.AnimatePosition(t.position, newPosition, 0.07f);
+            animationHelper.AnimateHeight(placeholder.GetComponent<LayoutElement>().preferredHeight, startingHeight, 0.1f, OnEndDragAnimateEnd);
             
             Debug.Log("OnEndDrag");
         }
 
-        private void OnEndDragAnimateEnd()
+        protected void OnEndDragAnimateEnd()
         {
             var cg = draggedItem.GetComponent<CanvasGroup>();
             if (cg!= null)
@@ -188,11 +140,13 @@ namespace InfernalRobotics.Gui
                 Destroy(cg);
             }
                 
-            draggedItem.transform.SetParent(startingParent);
+            draggedItem.transform.SetParent(dropZone);
             draggedItem.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
             draggedItem = null;
             
             Destroy(placeholder);
+            Destroy(animationHelper);
+            Destroy(draggedItemBG);
         }
     }
 

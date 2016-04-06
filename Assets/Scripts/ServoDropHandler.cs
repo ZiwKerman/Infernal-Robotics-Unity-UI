@@ -6,15 +6,15 @@ using System;
 namespace InfernalRobotics.Gui
 {
 
-    public class GroupDropHandler : MonoBehaviour, IDropHandler
+    public class ServoDropHandler : MonoBehaviour, IDropHandler
     {
         public void OnDrop(PointerEventData eventData)
         {
             var dropedObject = eventData.pointerDrag;
-            
+
             //here the group ordering logic for persistence will go in IR
 
-            Debug.Log("Group OnDrop: " + dropedObject.name);
+            Debug.Log("Servo OnDrop: " + dropedObject.name);
         }
     }
 

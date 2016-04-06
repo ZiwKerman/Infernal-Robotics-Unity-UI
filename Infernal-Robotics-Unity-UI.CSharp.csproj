@@ -93,6 +93,9 @@
     <Compile Include="Assets\Scripts\PanelDragger.cs" />
     <Compile Include="Assets\Scripts\PanelFocuser.cs" />
     <Compile Include="Assets\Scripts\PanelResizer.cs" />
+    <Compile Include="Assets\Scripts\ServoDragHandler.cs" />
+    <Compile Include="Assets\Scripts\ServoDropHandler.cs" />
+    <Compile Include="Assets\Scripts\UIAnimationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\KSPAssets\ReadMe.txt" />
