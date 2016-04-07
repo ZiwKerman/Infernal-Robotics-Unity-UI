@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{0B801F49-4B0D-51EE-54BF-F5BA91693C9F}</ProjectGuid>
+	<ProjectGuid>{AD7E970C-F766-44C3-7B0A-74EFDB435601}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,12 +45,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CanvasGroupFader.cs" />
      <Compile Include="Assets\Scripts\DummyImplementation\ControlGroup.cs" />
      <Compile Include="Assets\Scripts\DummyImplementation\MechanismBase.cs" />
      <Compile Include="Assets\Scripts\DummyImplementation\Servo.cs" />
      <Compile Include="Assets\Scripts\DummyImplementation\ServoInput.cs" />
      <Compile Include="Assets\Scripts\DummyImplementation\ServoMotor.cs" />
      <Compile Include="Assets\Scripts\DummyImplementation\ServoPreset.cs" />
+     <Compile Include="Assets\Scripts\GroupDragHandler.cs" />
+     <Compile Include="Assets\Scripts\GroupDropHandler.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IControlGroup.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IMechanism.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IPresetable.cs" />
@@ -60,9 +63,9 @@
      <Compile Include="Assets\Scripts\PanelDragger.cs" />
      <Compile Include="Assets\Scripts\PanelFocuser.cs" />
      <Compile Include="Assets\Scripts\PanelResizer.cs" />
-     <Compile Include="Assets\Scripts\TestUI.cs" />
-     <Compile Include="Assets\Scripts\UIWindowHelper.cs" />
-     <Compile Include="Assets\Scripts\UIWindowManager.cs" />
+     <Compile Include="Assets\Scripts\ServoDragHandler.cs" />
+     <Compile Include="Assets\Scripts\ServoDropHandler.cs" />
+     <Compile Include="Assets\Scripts\UIAnimationHelper.cs" />
      <None Include="Assets\SquadCore\Shaders\ParticleAlpha.shader" />
      <None Include="Assets\SquadCore\Shaders\EmissiveSpecular.shader" />
      <None Include="Assets\Plugins\KSPAssets\ReadMe.txt" />
@@ -79,27 +82,22 @@
      <None Include="Assets\SquadCore\Shaders\Diffuse.shader" />
      <None Include="Assets\SquadCore\Shaders\Alpha.shader" />
      <None Include="Assets\SquadCore\Shaders\Specular.shader" />
+     <None Include="Assets\XML\ir_ui_objects_bundle.xml" />
      <None Include="Assets\SquadCore\Shaders\KSPParticle AddSmooth.shader" />
      <None Include="Assets\SquadCore\Shaders\UnlitTransparent.shader" />
      <None Include="Assets\SquadCore\Shaders\SolidColorAlpha.shader" />
      <None Include="Assets\SquadCore\Shaders\ParticleAdd.shader" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
  <Reference Include="KSPAssetCompiler">
- <HintPath>/Users/stepanandreev/GitHub/InfernalRobotics.Unity/Infernal Robotics Unity UI/Assets/Plugins/KSPAssets/KSPAssetCompiler.dll</HintPath>
+ <HintPath>/Users/stepanandreev/GitHub/Infernal-Robotics-Unity-UI/Assets/Plugins/KSPAssets/KSPAssetCompiler.dll</HintPath>
  </Reference>
  <Reference Include="KSPAssets">
- <HintPath>/Users/stepanandreev/GitHub/InfernalRobotics.Unity/Infernal Robotics Unity UI/Assets/Plugins/KSPAssets/KSPAssets.dll</HintPath>
+ <HintPath>/Users/stepanandreev/GitHub/Infernal-Robotics-Unity-UI/Assets/Plugins/KSPAssets/KSPAssets.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
