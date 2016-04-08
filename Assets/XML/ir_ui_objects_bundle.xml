@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587415426186974963">
+<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587414859539445978">
   <Author>ZiwKerman</Author>
   <Info>UI Assets for Infernal Robotics Mod</Info>
   <Assets>
@@ -11,16 +11,24 @@
     <Asset Name="IRWindowBG" Path="Assets/Images/IRWindowBG.png" Type="Texture2D" Url="Images/IRWindowBG" AutoLoad="false" />
     <Asset Name="IRWindowBox" Path="Assets/Images/IRWindowBox.png" Type="Texture2D" Url="Images/IRWindowBox" AutoLoad="false" />
     <Asset Name="IRWindowButton" Path="Assets/Images/IRWindowButton.png" Type="Texture2D" Url="Images/IRWindowButton" AutoLoad="false" />
+    <Asset Name="IRWindowButtonGreen" Path="Assets/Images/IRWindowButtonGreen.png" Type="Texture2D" Url="Images/IRWindowButtonGreen" AutoLoad="false" />
+    <Asset Name="IRWindowButtonGreen_Hover" Path="Assets/Images/IRWindowButtonGreen_Hover.png" Type="Texture2D" Url="Images/IRWindowButtonGreen_Hover" AutoLoad="false" />
+    <Asset Name="IRWindowButtonGreen_Pressed" Path="Assets/Images/IRWindowButtonGreen_Pressed.png" Type="Texture2D" Url="Images/IRWindowButtonGreen_Pressed" AutoLoad="false" />
+    <Asset Name="IRWindowButtonRed" Path="Assets/Images/IRWindowButtonRed.png" Type="Texture2D" Url="Images/IRWindowButtonRed" AutoLoad="false" />
+    <Asset Name="IRWindowButtonRed_Hover" Path="Assets/Images/IRWindowButtonRed_Hover.png" Type="Texture2D" Url="Images/IRWindowButtonRed_Hover" AutoLoad="false" />
+    <Asset Name="IRWindowButtonRed_Pressed" Path="Assets/Images/IRWindowButtonRed_Pressed.png" Type="Texture2D" Url="Images/IRWindowButtonRed_Pressed" AutoLoad="false" />
     <Asset Name="IRWindowButton_Hover" Path="Assets/Images/IRWindowButton_Hover.png" Type="Texture2D" Url="Images/IRWindowButton_Hover" AutoLoad="false" />
     <Asset Name="IRWindowButton_Pressed" Path="Assets/Images/IRWindowButton_Pressed.png" Type="Texture2D" Url="Images/IRWindowButton_Pressed" AutoLoad="false" />
     <Asset Name="IRWindowButtonv2" Path="Assets/Images/IRWindowButtonv2.png" Type="Texture2D" Url="Images/IRWindowButtonv2" AutoLoad="false" />
     <Asset Name="IRWindowButtonv2_Hover" Path="Assets/Images/IRWindowButtonv2_Hover.png" Type="Texture2D" Url="Images/IRWindowButtonv2_Hover" AutoLoad="false" />
     <Asset Name="IRWindowButtonv2_Pressed" Path="Assets/Images/IRWindowButtonv2_Pressed.png" Type="Texture2D" Url="Images/IRWindowButtonv2_Pressed" AutoLoad="false" />
+    <Asset Name="IRWindowButtonv2_PressedHover" Path="Assets/Images/IRWindowButtonv2_PressedHover.png" Type="Texture2D" Url="Images/IRWindowButtonv2_PressedHover" AutoLoad="false" />
     <Asset Name="IRWindowClose" Path="Assets/Images/IRWindowClose.png" Type="Texture2D" Url="Images/IRWindowClose" AutoLoad="false" />
     <Asset Name="IRWindowClose_Hover" Path="Assets/Images/IRWindowClose_Hover.png" Type="Texture2D" Url="Images/IRWindowClose_Hover" AutoLoad="false" />
     <Asset Name="IRWindowClose_Pressed" Path="Assets/Images/IRWindowClose_Pressed.png" Type="Texture2D" Url="Images/IRWindowClose_Pressed" AutoLoad="false" />
     <Asset Name="IRWindowGroupFrame" Path="Assets/Images/IRWindowGroupFrame.png" Type="Texture2D" Url="Images/IRWindowGroupFrame" AutoLoad="false" />
     <Asset Name="IRWindowGroupFrame_Drag" Path="Assets/Images/IRWindowGroupFrame_Drag.png" Type="Texture2D" Url="Images/IRWindowGroupFrame_Drag" AutoLoad="false" />
+    <Asset Name="IRWindowHeader_Alt2" Path="Assets/Images/IRWindowHeader_Alt2.png" Type="Texture2D" Url="Images/IRWindowHeader_Alt2" AutoLoad="false" />
     <Asset Name="IRWindowServoFrame" Path="Assets/Images/IRWindowServoFrame.png" Type="Texture2D" Url="Images/IRWindowServoFrame" AutoLoad="false" />
     <Asset Name="IRWindowServoFrame_Drag" Path="Assets/Images/IRWindowServoFrame_Drag.png" Type="Texture2D" Url="Images/IRWindowServoFrame_Drag" AutoLoad="false" />
     <Asset Name="IRWindowSettings" Path="Assets/Images/IRWindowSettings.png" Type="Texture2D" Url="Images/IRWindowSettings" AutoLoad="false" />
