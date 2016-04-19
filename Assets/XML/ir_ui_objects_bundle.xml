@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587405906327960316">
+<KSPBundleDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" UrlName="ir_ui_objects" Name="ir_ui_objects" CreatedTime="-8587405441404434518">
   <Author>ZiwKerman</Author>
   <Info>UI Assets for Infernal Robotics Mod</Info>
   <Assets>
@@ -98,12 +98,11 @@
     <Asset Name="GenericWindowPrefab" Path="Assets/Prefabs/GenericWindowPrefab.prefab" Type="GameObject" Url="Prefabs/GenericWindowPrefab" AutoLoad="false" />
     <Asset Name="PresetLinePrefab" Path="Assets/Prefabs/PresetLinePrefab.prefab" Type="GameObject" Url="Prefabs/PresetLinePrefab" AutoLoad="false" />
     <Asset Name="PresetsWindowPrefab" Path="Assets/Prefabs/PresetsWindowPrefab.prefab" Type="GameObject" Url="Prefabs/PresetsWindowPrefab" AutoLoad="false" />
+    <Asset Name="SequenceCommandLine" Path="Assets/Prefabs/Sequencer/SequenceCommandLine.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequenceCommandLine" AutoLoad="false" />
     <Asset Name="SequenceLinePrefab" Path="Assets/Prefabs/Sequencer/SequenceLinePrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequenceLinePrefab" AutoLoad="false" />
-    <Asset Name="SequencerAGCommandLinePrefab" Path="Assets/Prefabs/Sequencer/SequencerAGCommandLinePrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequencerAGCommandLinePrefab" AutoLoad="false" />
     <Asset Name="SequencerEditorWindowPrefab" Path="Assets/Prefabs/Sequencer/SequencerEditorWindowPrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequencerEditorWindowPrefab" AutoLoad="false" />
     <Asset Name="SequencerLinePrefab" Path="Assets/Prefabs/Sequencer/SequencerLinePrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequencerLinePrefab" AutoLoad="false" />
     <Asset Name="SequencerMainWindowPrefab" Path="Assets/Prefabs/Sequencer/SequencerMainWindowPrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequencerMainWindowPrefab" AutoLoad="false" />
-    <Asset Name="SequencerServoCommandLinePrefab" Path="Assets/Prefabs/Sequencer/SequencerServoCommandLinePrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequencerServoCommandLinePrefab" AutoLoad="false" />
     <Asset Name="SequencerStateLinePrefab" Path="Assets/Prefabs/Sequencer/SequencerStateLinePrefab.prefab" Type="GameObject" Url="Prefabs/Sequencer/SequencerStateLinePrefab" AutoLoad="false" />
     <Asset Name="UISettingsWindowPrefab" Path="Assets/Prefabs/UISettingsWindowPrefab.prefab" Type="GameObject" Url="Prefabs/UISettingsWindowPrefab" AutoLoad="false" />
   </Assets>
